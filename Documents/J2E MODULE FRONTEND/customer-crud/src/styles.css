@@ -1,0 +1,6 @@
+/* You can add global styles to this file, and also import other style files */
+@import '../node_modules/bootstrap/dist/css/bootstrap.css';
+
+.form-group, h2,.btn-success{
+    margin: 20px;
+}

@@ -1,0 +1,45 @@
+<div class="container">
+    <table class="table" >
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>FirstName</th>
+                <th>LastName</th>
+                <th>Address</th>
+                <th>Email</th>
+                <th>Mobile</th>
+                <th>Update</th>
+                             
+            </tr>
+        </thead>
+        <tbody>
+            <tr  *ngFor="let customer of customers">
+            <td>{{customer.id}}</td>
+            <td>{{customer.firstName}}</td>
+            <td>{{customer.lastName}}</td>
+            <td>{{customer.address}}</td>
+            <td>{{customer.email}}</td>
+            <td>{{customer.mobile}}</td>
+            <td>
+                    <button type="button" class="btn btn-outline-info btn-sm" routerLink="/updateCustomer/{{customer.id}}">Update Details</button>
+                    
+            </td>
+          
+           
+            <!-- <td *ngFor="let products of customer.products">
+                    <div *ngIf="products==[]; then thenBlock else elseBlock"></div>
+                    <ng-template #thenBlock>No Products to this customer </ng-template>
+                    <ng-template #elseBlock>{{products.pname  }}</ng-template>
+                
+            </td>
+             -->
+            
+
+
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+<router-outlet></router-outlet>
+
